@@ -145,6 +145,7 @@ void DoublyLinkedList::add_new_head_tail_intermediate_floors_ER(std::vector<std:
     extend_DLL(min_max_ER);
 }
 
+/*
 void DoublyLinkedList::delete_current_node_if_head_or_tail(Node * current_node)
 {
     /// delete node if current node is at top or bottom of the DLL
@@ -156,7 +157,7 @@ void DoublyLinkedList::delete_current_node_if_head_or_tail(Node * current_node)
         deleteTail();
     }
 }
-
+*/
 
 void DoublyLinkedList::insertAtHead(int value) {
     Node* newNode = new Node(value, false, false); // add a floor with no stoppage
@@ -168,6 +169,7 @@ void DoublyLinkedList::insertAtHead(int value) {
         head = newNode;
     }
 }
+
 
 // Member function definition to insert a node at the tail of the list
 void DoublyLinkedList::insertAtTail(int value) {
@@ -181,6 +183,7 @@ void DoublyLinkedList::insertAtTail(int value) {
     }
 }
 
+/*
 // Traverse the doubly linked list in forward direction
 void DoublyLinkedList::DLL_Traversal(Node* head) {
     Node* current = head;
@@ -191,6 +194,7 @@ void DoublyLinkedList::DLL_Traversal(Node* head) {
     }
     //std::cout << std::endl;
 }
+*/
 
 // Delete the head node
 void DoublyLinkedList::deleteHead() {

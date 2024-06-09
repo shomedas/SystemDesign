@@ -105,7 +105,8 @@ int main(int argc, char *argv[]) {
                 current_node = current_node->next;
                 if (!pair_exists_in_vector(pending_ER, temp_pair))
                 {
-                    DLL_floors.delete_current_node_if_head_or_tail(current_node->prev);
+                    //DLL_floors.delete_current_node_if_head_or_tail(current_node->prev);
+                    DLL_floors.deleteHead();
                 }
                 current_direction = DOWN;
             }
@@ -116,7 +117,8 @@ int main(int argc, char *argv[]) {
                 current_node = current_node->prev;//can only go up
                 if (!pair_exists_in_vector(pending_ER, temp_pair))
                 {
-                    DLL_floors.delete_current_node_if_head_or_tail(current_node->next);
+                    //DLL_floors.delete_current_node_if_head_or_tail(current_node->next);
+                    DLL_floors.deleteTail();
                 }
                 current_direction = UP;
             }

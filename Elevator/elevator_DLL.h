@@ -34,7 +34,7 @@ public:
     void add_new_head_tail_intermediate_floors_IR(std::vector<int> IR);
     void add_new_head_tail_intermediate_floors_ER(std::vector<std::pair<int, DIR> > ER);
 
-    void delete_current_node_if_head_or_tail(Node * current_node);
+    //void delete_current_node_if_head_or_tail(Node * current_node);
 
     void set_stop_up_down_using_index(int index, DIR direction);
 
@@ -45,7 +45,7 @@ public:
 
     void set_up_down_stops_ER(std::vector<std::pair<int, DIR> > ER);
 
-    void DLL_Traversal(Node* head);
+    //void DLL_Traversal(Node* head);
     void deleteHead();
     void deleteTail();
     void insertAtHead(int value);
