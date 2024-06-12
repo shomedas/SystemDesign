@@ -16,7 +16,7 @@ DoublyLinkedList::DoublyLinkedList() : head(nullptr), tail(nullptr) {}
 
 // Function to set the floor index of a node specified by its index
 // and direction in which it should stop
-void DoublyLinkedList::set_stop_up_down_using_index(int index, DIR direction) {
+void DoublyLinkedList::set_stop_up_down_using_index_direction(int index, DIR direction) {
     //if (index < 1) {
     //    throw std::invalid_argument("Index should be greater than or equal to 1.");
     //}
@@ -56,7 +56,7 @@ void DoublyLinkedList::set_up_down_stops_ER(std::vector<std::pair<int, DIR>> ER)
         // use the index to set the stop up/down within the DLL
         DIR ER_DIR = ER[i].second;
 
-        set_stop_up_down_using_index(idx_wrt_head, ER_DIR);
+        set_stop_up_down_using_index_direction(idx_wrt_head, ER_DIR);
     }
 }
 
@@ -81,7 +81,7 @@ void DoublyLinkedList::set_up_down_stops_IR(std::vector<int> IR, Node * current_
             IR_DIR = DOWN;
         }
 
-        set_stop_up_down_using_index(idx_wrt_head, IR_DIR);
+        set_stop_up_down_using_index_direction(idx_wrt_head, IR_DIR);
     }
 }
 
@@ -222,10 +222,12 @@ void DoublyLinkedList::deleteTail() {
     delete temp;
 }
 
+/*
 // Reset stops once serviced
 void DoublyLinkedList::reset_stops_once_serviced() {
     // Implementation
 }
+*/
 
 // Count the number of nodes in the list
 int DoublyLinkedList::countNodes() {
@@ -238,6 +240,7 @@ int DoublyLinkedList::countNodes() {
     return count;
 }
 
+/*
 // Display the linked list
 void DoublyLinkedList::display() {
     Node* current = head;
@@ -246,6 +249,7 @@ void DoublyLinkedList::display() {
         current = current->next;
     }
 }
+*/
 
 // Find movement direction of STATIONARY lift from internal requests and external requests
 DIR find_direction_from_IR_ER(int current_floor, std::vector<int> IR,

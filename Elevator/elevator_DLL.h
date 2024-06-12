@@ -36,7 +36,7 @@ public:
 
     //void delete_current_node_if_head_or_tail(Node * current_node);
 
-    void set_stop_up_down_using_index(int index, DIR direction);
+    void set_stop_up_down_using_index_direction(int index, DIR direction);
 
     void set_up_down_stops_IR(std::vector<int> IR, Node * current_node,
                                                 DIR direction);
@@ -50,11 +50,11 @@ public:
     void deleteTail();
     void insertAtHead(int value);
     void insertAtTail(int value);
-    void reset_stops_once_serviced();
-    void set_stop_up_down_using_index(int idx);
+    //void reset_stops_once_serviced();
+    //void set_stop_up_down_using_index_direction(int idx);
     int countNodes();
     //void set_current_node(Node* node);
-    void display();
+    //void display();
     void printFloorValues();
 };
 
