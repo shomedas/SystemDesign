@@ -145,19 +145,6 @@ void DoublyLinkedList::add_new_head_tail_intermediate_floors_ER(std::vector<std:
     extend_DLL(min_max_ER);
 }
 
-/*
-void DoublyLinkedList::delete_current_node_if_head_or_tail(Node * current_node)
-{
-    /// delete node if current node is at top or bottom of the DLL
-    if (current_node == head){
-        deleteHead();
-    }
-
-    if (current_node == tail){
-        deleteTail();
-    }
-}
-*/
 
 void DoublyLinkedList::insertAtHead(int value) {
     Node* newNode = new Node(value, false, false); // add a floor with no stoppage
@@ -182,19 +169,6 @@ void DoublyLinkedList::insertAtTail(int value) {
         tail = newNode;
     }
 }
-
-/*
-// Traverse the doubly linked list in forward direction
-void DoublyLinkedList::DLL_Traversal(Node* head) {
-    Node* current = head;
-    while (current != nullptr) {
-        // Output data of the current node
-        // cout << current->data << " ";
-        current = current->next;
-    }
-    //std::cout << std::endl;
-}
-*/
 
 // Delete the head node
 void DoublyLinkedList::deleteHead() {
@@ -222,13 +196,6 @@ void DoublyLinkedList::deleteTail() {
     delete temp;
 }
 
-/*
-// Reset stops once serviced
-void DoublyLinkedList::reset_stops_once_serviced() {
-    // Implementation
-}
-*/
-
 // Count the number of nodes in the list
 int DoublyLinkedList::countNodes() {
     int count = 0;
@@ -239,17 +206,6 @@ int DoublyLinkedList::countNodes() {
     }
     return count;
 }
-
-/*
-// Display the linked list
-void DoublyLinkedList::display() {
-    Node* current = head;
-    while (current) {
-        std::cout << "Floor " << current->floor_index << ": Stop Up - " << (current->stop_up ? "True" : "False") << ", Stop Down - " << (current->stop_down ? "True" : "False") << std::endl;
-        current = current->next;
-    }
-}
-*/
 
 // Find movement direction of STATIONARY lift from internal requests and external requests
 DIR find_direction_from_IR_ER(int current_floor, std::vector<int> IR,
@@ -289,3 +245,47 @@ void DoublyLinkedList::printFloorValues() {
     std::cout << std::endl;
 }
 
+/*
+// Display the linked list
+void DoublyLinkedList::display() {
+    Node* current = head;
+    while (current) {
+        std::cout << "Floor " << current->floor_index << ": Stop Up - " << (current->stop_up ? "True" : "False") << ", Stop Down - " << (current->stop_down ? "True" : "False") << std::endl;
+        current = current->next;
+    }
+}
+*/
+
+/*
+// Reset stops once serviced
+void DoublyLinkedList::reset_stops_once_serviced() {
+    // Implementation
+}
+*/
+
+/*
+// Traverse the doubly linked list in forward direction
+void DoublyLinkedList::DLL_Traversal(Node* head) {
+    Node* current = head;
+    while (current != nullptr) {
+        // Output data of the current node
+        // cout << current->data << " ";
+        current = current->next;
+    }
+    //std::cout << std::endl;
+}
+*/
+
+/*
+void DoublyLinkedList::delete_current_node_if_head_or_tail(Node * current_node)
+{
+    /// delete node if current node is at top or bottom of the DLL
+    if (current_node == head){
+        deleteHead();
+    }
+
+    if (current_node == tail){
+        deleteTail();
+    }
+}
+*/

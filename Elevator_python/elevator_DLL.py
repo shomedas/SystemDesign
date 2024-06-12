@@ -8,7 +8,6 @@ class Node:
         self.prev = None
 
 class DoublyLinkedList:
-
     def __init__(self):
         self.head=None
         self.tail=None
@@ -50,10 +49,27 @@ class DoublyLinkedList:
             self.tail.next = None
 
     def counNodes(self):
-        #
+        count=0
+        temp=self.head
+        while temp is not None:
+            temp = temp.next
+            count+=1
+        return count
 
     def printFloorValues(self):
-        #
+        if self.head == None:
+            return
+        # print from head to tail
+        temp = self.head
+        while temp is not None:
+            print(temp.floor_index)
+            temp=temp.next
+
+        # print from tail to head
+        temp = self.tail
+        while temp is not None:
+            print(temp.floor_index)
+            temp=temp.prev
 
     def set_stop_up_down_using_index_direction(self, index, direction):
 
