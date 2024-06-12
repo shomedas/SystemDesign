@@ -1,7 +1,7 @@
 
 
 if __name__=="__main__":
-    # create the floor list as a doublly linked list
+    # create the floor list as a doubly linked list
 
     # initialize elevator with single current floor, direction
 
